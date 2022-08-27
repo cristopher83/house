@@ -2,69 +2,96 @@ import java.util.Scanner;
 
 public class house {
 
-    private kitchen kitchen1 = new kitchen();
-    private LivingRoom LivingRoom1 = new LivingRoom();
-    private DiningRoom DinningRoom1 = new DiningRoom();
-    private RestRoom RestRoom1 = new RestRoom();
-    private BedRoom Bedroom1 = new BedRoom();
-    private Yard Yard1 = new Yard();
+    private kitchen kitch = new kitchen();
+    private LivingRoom LR = new LivingRoom();
+    private DiningRoom DR = new DiningRoom();
+    private RestRoom RR = new RestRoom();
+    private BedRoom BR = new BedRoom();
+    private Yard Yrd = new Yard();
 
     public static void main(String []args)
     {
-
+        addRestRoom();
+        addBedRoom();
     }
-    public kitchen getKitchen1()
+    public kitchen getKitchen()
     {
-        return kitchen1;
+        return kitch;
     }
-    public  void setKitchen1(kitchen kitchen1)
+    public  void setKitchen(kitchen kitch)
     {
-        this.kitchen1=kitchen1;
+        this.kitch=kitch;
     }
     public DiningRoom getDinningRoom1()
     {
-        return DinningRoom1;
+        return DR;
     }
-    public void setDinningRoom1(DiningRoom DinningRoom1)
+    public void setDinningRoom(DiningRoom DR)
     {
-        this.DinningRoom1=DinningRoom1;
+        this.DR=DR;
     }
 
-    public LivingRoom getLivingRoom1()
+    public LivingRoom getLivingRoom()
     {
-        return LivingRoom1;
+        return LR;
     }
-    public void setLivingRoom1(LivingRoom LivingRoom1)
+    public void setLivingRoom(LivingRoom LR)
     {
-        this.LivingRoom1=LivingRoom1;
-    }
-
-    public RestRoom getRestRoom1()
-    {
-        return RestRoom1;
-    }
-    public void setRestRoom1(RestRoom RestRoom1)
-    {
-        this.RestRoom1=RestRoom1;
+        this.LR=LR;
     }
 
+    public RestRoom getRestRoom()
+    {
+        return RR;
+    }
+    public void setRestRoom(RestRoom RR)
+    {
+        this.RR=RR;
+    }
 
-    public BedRoom getBedroom1()
+
+    public BedRoom getBedroom()
     {
-        return Bedroom1;
+        return BR;
     }
-    public void setBedroom1(BedRoom bedroom1)
+    public void setBedroom(BedRoom BR)
     {
-        this.Bedroom1=bedroom1;
+        this.BR=BR;
     }
 
-    public Yard getYard1()
+    public Yard getYard()
     {
-        return Yard1;
+        return Yrd;
     }
-    public void setYard1(Yard Yard1)
+    public void setYard(Yard Yrd)
     {
-        this.Yard1=Yard1;
+        this.Yrd=Yrd;
     }
-    
+
+    public void addBedRoom()
+    {
+        getBedroom();
+        setBedroom(BR);
+        BR.getTv();
+        BR.setTv(true);
+        BR.getColor();
+        BR.setColor("Amarillo");
+        BR.getWidth();
+        BR.setWidth(34);
+        BR.getHeight();
+        BR.setHeight(45);
+        BR.getBed_size();
+        BR.setBed_size(bedsize.MATRIMONIAL);
+    }
+    public void addRestRoom()
+    {
+        getRestRoom();
+        setRestRoom(RR);
+        RR.getColor();
+        RR.setColor("Amarillo");
+        RR.getWidth();
+        RR.setWidth(34);
+        RR.getHeight();
+        RR.setHeight(45);
+    }
 }

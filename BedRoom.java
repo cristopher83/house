@@ -5,10 +5,20 @@ public class BedRoom {
     private int height;
     private String color;
 
+    private bedsize bed_size;
+
     public static void main(String []args)
     {
-
     }
+
+    public bedsize getBed_size() {
+        return bed_size;
+    }
+    public void setBed_size(bedsize bed_size)
+    {
+        this.bed_size= bed_size;
+    }
+
     public  boolean getTv()
     {
         return tv;
